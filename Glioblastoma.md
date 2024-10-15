@@ -9,7 +9,7 @@ install.packages("ggplot2")      # for volcano plots
 install.packages("factoextra")   # for clustering visualization
 ```
 
-Loading Necessary Libraries
+# Loading Necessary Libraries
 Load the required libraries to use their functions:
 ```
 library(gplots)       # for heatmap generation
@@ -17,13 +17,14 @@ library(RColorBrewer) # for color palettes
 library(ggplot2)      # for volcano plots
 library(factoextra)   # for clustering visualization 
 ```
-Load the Glioblastoma Dataset
+# Load the Glioblastoma Dataset
 Load the glioblastoma dataset (rows as genes, columns as samples) and set the first column to be row names so that the rest of the dataframe can be purely numeric:
 ```
 GBLM <- read.csv("https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/Cancer2024/glioblastoma.csv", row.names = 1) 
 View(GBLM) # View dataset to see the structure
 ```
-Sequential Color Palette
+# Color palettes for the heatmaps
+Sequential color palette
 Create a sequential color palette using the maximum number of shades of green:
 ```
 seq <- brewer.pal(9, "Greens") # Green gradient where light green represents low counts
@@ -35,9 +36,7 @@ Create a diverging color palette (5 red, 5 blue, 1 neutral) to represent express
 div <- rev(brewer.pal(11, "RdBu")) # Red for up-regulation and blue for down-regulation
 display.brewer.pal(n=11, name = "RdBu")
 ```
-Heatmaps of Glioblastoma Dataset
-Generate heatmaps of the glioblastoma dataset with different color palettes:
-
+# Heatmaps of Glioblastoma Dataset
 Heatmap with Sequential Palette Coloring of Green
 ```
 heatmap.2(as.matrix(GBLM),
@@ -98,7 +97,7 @@ heatmap.2(as.matrix(GBLM),
           main = "Heatmap of 500+ genes expression \nin Glioblastoma dataset\n clustering by genes and samples",
           cexRow = 0.9, cexCol = 0.7, margins = c(11,10))
 ```
-Subset Genes that are Significantly Up- and Down-Regulated
+# Subset Genes that are Significantly Up- and Down-Regulated
 Get the column names and divide the dataframe into two groups using index positions of columns:
 ```
 colnames(GBLM) 
@@ -121,20 +120,22 @@ GBLM$pvalues <- apply(GBLM, 1, function(row) {
   t.test(row[1:5], row[6:10])$p.value
 })
 ```
-Visualize the Fold Change and -Log10 P-value
+# Visualize the Fold Change and -Log10 P-value
 ```
 plot(GBLM$log2fold_change, GBLM$pvalues)
 abline(h = 0.25, col = "red", lty = 2)
 abline(v = 1.5, col = "blue", lty = 2)
 abline(v = -1.5, col = "blue", lty = 2)
+```
 
 # Displaying up- and down-regulated genes 
+```
 UpRegGenes <- GBLM[GBLM$log2fold_change > 1.5 & GBLM$pvalues < 0.25, ]
 rownames(UpRegGenes) # List of up-regulated genes
 DownRegGenes <- GBLM[GBLM$log2fold_change < -1.5 & GBLM$pvalues < 0.25, ]
 rownames(DownRegGenes) # List of down-regulated genes 
 ```
-Creating Volcano Plots
+# Creating Volcano Plots
 Visualize the relationship between fold change and statistical significance using a volcano plot:
 ```
 ggplot(GBLM, aes(log2fold_change, -log10(pvalues))) +
@@ -148,7 +149,7 @@ ggplot(GBLM, aes(log2fold_change, -log10(pvalues))) +
        y = "-Log10 P-value") +
   theme(legend.title = element_blank())
 ```
-K-means Clustering on the Expression Data
+# K-means Clustering on the Expression Data
 Normalize the data and perform K-means clustering:
 ```
 # Normalize the data (optional)
