@@ -1,3 +1,12 @@
+# Project Title: Data Analysis of TCGA Glioblastoma Dataset
+
+## 1. Project Overview
+
+**Objective:** Analyze gene expression data from glioblastoma samples to identify significant up- and down-regulated genes and explore clustering patterns.
+
+**Data Source:** TCGA Glioblastoma dataset.
+
+
 # Installing Necessary Packages
 
 To ensure the necessary libraries are loaded, install the following packages:
