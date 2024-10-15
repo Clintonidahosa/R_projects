@@ -47,8 +47,3 @@ This analysis includes:
 ![K-means Clustering Example](path/to/clustering.png)
 *K-means clustering results.*
 
-## Installation Instructions
-To run this project locally, please follow these steps:
-1. Install necessary R packages:
-   ```r
-   install.packages(c("gplots", "RColorBrewer", "ggplot2", "factoextra"))
