@@ -177,14 +177,4 @@ fviz_cluster(kmeans_res, data = norm_data, geom = "point",
              ellipse.type = "convex")
 ```
 
-## 9. Real-World Applications
-
-**Comments:**
-- The analysis can aid in identifying potential biomarkers for glioblastoma.
-- Insights from this analysis can inform targeted therapies and improve patient outcomes.
-
-## 10. Conclusion
-
-**Summary of Findings:**
-- Highlight significant genes, clustering patterns, and potential implications for glioblastoma research.
 
