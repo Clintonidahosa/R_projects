@@ -47,3 +47,14 @@ This analysis includes:
 ![K-means Clustering Example](path/to/clustering.png)
 *K-means clustering results.*
 
+
+## Applications
+
+**Comments:**
+- The analysis can aid in identifying potential biomarkers for glioblastoma.
+- Insights from this analysis can inform targeted therapies and improve patient outcomes.
+
+## Conclusion
+
+**Summary of Findings:**
+- Highlight significant genes, clustering patterns, and potential implications for glioblastoma research.
