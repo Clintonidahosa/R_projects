@@ -64,7 +64,7 @@ heatmap.2(as.matrix(GBLM),
           key = T, scale = "row",
           key.title = "Gene expression",
           density.info = "none",
-          main = "Heatmap of 500+ genes expression \nin glioblastoma dataset",
+          main = "Heatmap of 500+ genes expression \nin glioblastoma dataset \nwith sequential palette coloring",
           cexRow = 0.9, cexCol = 0.9, margins = c(12,8))
 ```
 Heatmap with Diverging Palette Coloring of RdBu
@@ -76,7 +76,7 @@ heatmap.2(as.matrix(GBLM),
           key = T, scale = "row",
           key.title = "Gene expression",
           density.info = "none",
-          main = "Heatmap of 500+ genes expression \nin glioblastoma dataset",
+          main = "Heatmap of 500+ genes expression \nin glioblastoma dataset \nwith diverging palette coloring",
           cexRow = 0.9, cexCol = 0.9, margins = c(11,10))
 ```
 Heatmap Clustering by Genes (Rows)
