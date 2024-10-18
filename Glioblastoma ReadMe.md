@@ -38,7 +38,7 @@ This analysis includes:
 - Clustering results provide potential insights into the biological variability among samples.
 
 ## Visualizations
-![Heatmap Example](path/to/heatmap.png)
+![Heatmap Example](https://drive.google.com/drive/folders/1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM)
 *Heatmap of gene expression.*
 
 ![Volcano Plot Example](path/to/volcano_plot.png)
