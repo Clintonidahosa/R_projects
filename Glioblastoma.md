@@ -12,11 +12,20 @@
 To ensure the necessary libraries are loaded, install the following packages:
 
 ```
-install.packages("gplots")       # for heatmap generation
-install.packages("RColorBrewer") # for color palettes
-install.packages("ggplot2")      # for volcano plots
-install.packages("factoextra")   # for clustering visualization
-```
+# List of required packages
+required_packages <- c("gplots", "RColorBrewer", "ggplot2", "factoextra")
+
+# Function to check if a package is installed and install it if necessary
+install_if_missing <- function(package) {
+  if (!requireNamespace(package, quietly = TRUE)) {
+    install.packages(package)
+  }
+}
+
+# Apply the function to all required packages
+invisible(lapply(required_packages, install_if_missing))
+
+ ```
 
 # Loading Necessary Libraries
 Load the required libraries to use their functions:
