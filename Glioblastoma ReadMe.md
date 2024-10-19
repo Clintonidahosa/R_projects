@@ -29,7 +29,8 @@ This analysis includes:
 3. **Visualization Techniques:**
    - HEATMAPS - I created heatmaps to visualize gene expression across samples using the heatmap.2() function from the gplots package in R. I applied sequential and 
                 diverging color palettes: sequential for gradient changes and diverging to highlight deviations from a central value.
-   -SCATTER PLOT - This type of plot was used to visualize the results of differential gene expression analysis, where the log2fold_change represents the magnitude of change 
+   - SCATTER PLOT - This type of plot was used to visualize the results of differential gene expression analysis, where the log2fold_change represents the magnitude of 
+                    change 
                    and the pvalues represent statistical significance.  
    - VOLCANO PLOTS - This is to represent the relationship between fold change and statistical significance. They were created using ggplot2 package also.
    - CLUSTERING - K-means clustering to identify clusters of gene expression profiles.
