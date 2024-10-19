@@ -1,4 +1,5 @@
 # MEDICAID SPENDING BY DRUG R PROJECT
+***
 ## Installing Relevant Packages
 ### To ensure that all necessary packages are installed, run the following code:
 
@@ -33,7 +34,7 @@ url <- "https://raw.githubusercontent.com/Clintonidahosa/R_projects/refs/heads/m
 drugdata <- read.csv(url)
 ```
 
-
+***
 # Data Cleaning and Inspection
 ## Visual Inspection
 ### Perform a visual inspection of the dataset:
@@ -108,13 +109,12 @@ summary_stats <- drugdata %>%
   summarise(across(where(is.numeric), list(min = min, max = max), na.rm = TRUE))  # Calculate min and max for all numeric columns
 View(summary_stats)  # All values are within normal range. No negative value.
 ```
-## Conclusion from Data Inspection - The raw dataset is clean and ready to be explored.
-
-***
-
+### Conclusion from Data Inspection - The raw dataset is clean and ready to be explored.
+*
+*
+*
 
 # Exploratory Data Analysis and Visualizations
-## Dataset Structure
 ### Visualize the overall structure of the dataset:
 ```
 View(head(drugdata))
@@ -209,8 +209,9 @@ ggplot(melted_cor_matrix, aes(Var1, Var2, fill = value)) +
   labs(title = "Correlation Heatmap of Drug Spending Variables") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
-***
-
+*
+*
+*
 # Predictive Modeling
 ## Random Forest Model
 ### Create a random forest model to predict total spending based on available features:
