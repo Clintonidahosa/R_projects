@@ -29,6 +29,8 @@ This analysis includes:
 3. **Visualization Techniques:**
    - HEATMAPS - I created heatmaps to visualize gene expression across samples using the heatmap.2() function from the gplots package in R. I applied sequential and 
                 diverging color palettes: sequential for gradient changes and diverging to highlight deviations from a central value.
+   -SCATTER PLOT - This type of plot was used to visualize the results of differential gene expression analysis, where the log2fold_change represents the magnitude of change 
+                   and the pvalues represent statistical significance.  
    - VOLCANO PLOTS - This is to represent the relationship between fold change and statistical significance. They were created using ggplot2 package also.
    - CLUSTERING - K-means clustering to identify clusters of gene expression profiles.
 
@@ -48,12 +50,14 @@ This analysis includes:
   <img src="https://drive.google.com/uc?export=view&id=1v4bssRQBHb54vkr5VKlXeVQskH1wW06z" alt="Image 5" width="400"/>
 </p>
 
+*Scatter plot showing magnitute of change(log2fold_change) and statistical significance (p-value)
+<img src="https://drive.google.com/uc?export=view&id=1hocMAjF47BMIFRNguGRCBXoxTCpw_Saw" alt="Image Description" width="400"/>
 
-![Volcano Plot Example](path/to/volcano_plot.png)
 *Volcano plot showing fold change vs. p-value.*
+<img src="https://drive.google.com/uc?export=view&id=1MYB4cq4ZPvNwac6imjhfxN2iNhteUar9" alt="Image Description" width="400"/>
 
-![K-means Clustering Example](path/to/clustering.png)
 *K-means clustering results.*
+<img src="https://drive.google.com/uc?export=view&id=1-NHaElqQnUXahcz9IGc9d-y42UuIvHHo" alt="Image Description" width="400"/>
 
 
 ## Applications
