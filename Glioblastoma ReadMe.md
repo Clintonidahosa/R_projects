@@ -27,9 +27,10 @@ This analysis includes:
    - Log2 fold change and p-values are calculated to identify significantly regulated genes.
 
 3. **Visualization Techniques:**
-   - Heatmaps to visualize gene expression across samples.
-   - Volcano plots to represent the relationship between fold change and statistical significance.
-   - K-means clustering to identify clusters of gene expression profiles.
+   - HEATMAPS - I created heatmaps to visualize gene expression across samples using the heatmap.2() function from the gplots package in R. I applied sequential and 
+                diverging color palettes: sequential for gradient changes and diverging to highlight deviations from a central value.
+   - VOLCANO PLOTS - This is to represent the relationship between fold change and statistical significance. They were created using ggplot2 package also.
+   - CLUSTERING - K-means clustering to identify clusters of gene expression profiles.
 
 ## Results
 - **Up-regulated Genes:** List of genes that show significant increases in expression.
