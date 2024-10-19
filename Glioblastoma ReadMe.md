@@ -40,8 +40,11 @@ This analysis includes:
 ## Visualizations
 *Heatmap of gene expression.*
 <p align="center">
-  <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="First Image" width="200"/>
-  <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="200"/>
+  <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="First Image" width="500"/>
+  <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="500"/>
+   <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="500"/>
+   <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="500"/>
+   <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="500"/>
 </p>
 
 
