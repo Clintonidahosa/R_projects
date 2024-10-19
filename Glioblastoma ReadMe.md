@@ -39,14 +39,15 @@ This analysis includes:
 - Clustering results provide potential insights into the biological variability among samples.
 
 ## Visualizations
-*Heatmap of gene expression.*
+*Heatmaps of gene expression.*
 <p align="center">
-  <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="First Image" width="400"/>
-  <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="400"/>
-   <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="400"/>
-   <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="400"/>
-   <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="400"/>
+  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 1" width="400"/>
+  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 2" width="400"/>
+  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 3" width="400"/>
+  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 4" width="400"/>
+  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 5" width="400"/>
 </p>
+
 
 
 ![Volcano Plot Example](path/to/volcano_plot.png)
