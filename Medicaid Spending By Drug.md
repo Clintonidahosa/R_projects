@@ -213,21 +213,27 @@ ggplot(melted_cor_matrix, aes(Var1, Var2, fill = value)) +
 # Predictive Modeling ( Random Forest Model)
 ### Create a random forest model to predict total spending based on available features:
 ```
+# Select only 2022 data columns to avoid missing values
+drugdata_2022 <- drugdata %>%
+  select(Brnd_Name, Gnrc_Name, Mftr_Name, Tot_Spndng_2022, Tot_Dsg_Unts_2022, Tot_Clms_2022, Avg_Spnd_Per_Dsg_Unt_Wghtd_2022, Avg_Spnd_Per_Clm_2022, Outlier_Flag_2022)
+
 # Splitting dataset into training and testing sets (80% train, 20% test)
 set.seed(42)  # For reproducibility
-train_index <- createDataPartition(drugdata$Tot_Spndng_2022, p = 0.8, list = FALSE)
-train_data <- drugdata[train_index, ]
-test_data <- drugdata[-train_index, ]
+train_index <- createDataPartition(drugdata_2022$Tot_Spndng_2022, p = 0.8, list = FALSE)
+train_data <- drugdata_2022[train_index, ]
+test_data <- drugdata_2022[-train_index, ]
+
 
 # Fit a random forest model
 rf_model <- randomForest(Tot_Spndng_2022 ~ ., data = train_data, ntree = 100)
 
-# Make predictions
+# Make predictions on the test set
 predictions <- predict(rf_model, test_data)
 
 # Evaluate model performance
 rf_performance <- postResample(predictions, test_data$Tot_Spndng_2022)
 print(rf_performance)  # RMSE and R-squared
+
 ```
 
 
