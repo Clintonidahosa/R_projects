@@ -31,7 +31,7 @@ nhanes = read.csv("https://raw.githubusercontent.com/HackBio-Internship/public_d
 # View dataset to ensure it is loaded
 View(nhanes)
 ```
-<img src="https://drive.google.com/uc?export=view&id=1BZCc2RQBLedMaYE8-OJasBFqC0Ld2VRF" alt="Image description" width="500" height="150">
+<img src="https://drive.google.com/uc?export=view&id=1BZCc2RQBLedMaYE8-OJasBFqC0Ld2VRF" alt="Image description" width="500" height="300">
 
 
 ```
