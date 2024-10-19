@@ -31,8 +31,7 @@ nhanes = read.csv("https://raw.githubusercontent.com/HackBio-Internship/public_d
 # View dataset to ensure it is loaded
 View(nhanes)
 ```
-<a href="https://drive.google.com/file/d/1BZCc2RQBLedMaYE8-OJasBFqC0Ld2VRF/view?usp=sharing" target="_blank">Download the File from Google Drive</a>
-
+<img src="https://drive.google.com/uc?export=view&id=1BZCc2RQBLedMaYE8-OJasBFqC0Ld2VRF" alt="Image description">
 
 ```
 # Check all columns for distinct values to check for NA
