@@ -41,13 +41,12 @@ This analysis includes:
 ## Visualizations
 *Heatmaps of gene expression.*
 <p align="center">
-  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 1" width="400"/>
-  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 2" width="400"/>
-  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 3" width="400"/>
-  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 4" width="400"/>
-  <img src="https://drive.google.com/uc?id=1H0pmS1woRRgZ9oJt9aAXwhshaWlufzgM" alt="Image 5" width="400"/>
+  <img src="https://drive.google.com/uc?export=view&id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Image 1" width="400"/>
+  <img src="https://drive.google.com/uc?export=view&id=1UwM-dpZ2psPjjvBUSd4BxA9qa84HIKkc" alt="Image 2" width="400"/>
+  <img src="https://drive.google.com/uc?export=view&id=1_coAIaQ90HEyalEc-TrmJAWs7SVWf15l" alt="Image 3" width="400"/>
+  <img src="https://drive.google.com/uc?export=view&id=1J7pe0IClJ_poTTRHmfZjtLhw_KGMksuJ" alt="Image 4" width="400"/>
+  <img src="https://drive.google.com/uc?export=view&id=1v4bssRQBHb54vkr5VKlXeVQskH1wW06z" alt="Image 5" width="400"/>
 </p>
-
 
 
 ![Volcano Plot Example](path/to/volcano_plot.png)
