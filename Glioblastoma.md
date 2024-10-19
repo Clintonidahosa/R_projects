@@ -170,12 +170,12 @@ ggplot(GBLM, aes(log2fold_change, -log10(pvalues))) +
 # K-means Clustering on the Expression Data
 Normalize the data and perform K-means clustering:
 ```
-# Normalize the data (optional)
+# Normalize the data 
 norm_data <- scale(as.matrix(GBLM))
 
 # Perform K-means clustering
 set.seed(123)  # For reproducibility
-kmeans_res <- kmeans(norm_data, centers = 3)  # Change centers based on your data
+kmeans_res <- kmeans(norm_data, centers = 3)  
 
 # Add cluster results to the original dataset
 GBLM$cluster <- as.factor(kmeans_res$cluster)
