@@ -64,6 +64,7 @@ hist(cleaned_data1$Weight, main="Weight histogram", xlab="Weight(kg)", col="blue
 hist(cleaned_data1$Mod_Weight, main="Weight(pounds) histogram", xlab="Weight(pounds)", col="green", border="black")
 hist(cleaned_data1$Age, main="Age histogram", xlab="Age", col="yellow", border="black")
 ```
+<img src="https://drive.google.com/uc?export=view&id=1f0_dcjjkjQvJ7MmpueuWH8rxwhAtgbAc" alt="Image description" width="1000" height="300">
 
 ```
 
@@ -97,9 +98,6 @@ plot(cleaned_data1$Weight, cleaned_data1$Height,
      ylab = "Height(cm)",
      col = "light blue",
      lwd = 2)
-```
-
-```
 
 # TASK 6bi - Color the points by gender
 unique(cleaned_data1$Gender)   # shows distinct values in Gender column
@@ -111,9 +109,6 @@ plot(cleaned_data1$Weight, cleaned_data1$Height,
      col = Gender_color[cleaned_data1$Gender],
      lwd = 2)
 legend("topright", legend=names(Gender_color), col=Gender_color, pch=19)
-```
-
-```
 
 # TASK 6bii - Color the points by Diabetes
 unique(cleaned_data1$Diabetes)   # shows distinct values in Diabetes column
@@ -125,9 +120,6 @@ plot(cleaned_data1$Weight, cleaned_data1$Height,
      col = Diabetes_color[cleaned_data1$Diabetes],
      lwd = 2)
 legend("topright", legend=names(Diabetes_color), col=Diabetes_color, pch=19)
-```
-
-```
 
 # TASK 6biii - Color the points by SmokingStatus
 unique(cleaned_data1$SmokingStatus)   # shows distinct values in SmokingStatus column
@@ -140,6 +132,7 @@ plot(cleaned_data1$Weight, cleaned_data1$Height,
      lwd = 2)
 legend("topright", legend=names(SmokingStatus_color), col=SmokingStatus_color, pch=19)
 ```
+<img src="https://drive.google.com/uc?export=view&id=1nJ5seftzAnr_s5Kj7PnSaj7HsK6uSdGJ" alt="Image description" width="1000" height="300">
 
 ```
 
@@ -148,6 +141,7 @@ t_test_1 <- t.test(Age ~ Gender, data = cleaned_data1)
 print(t_test_1)
 # p-value > 0.05 hence, there is no statistically significant difference between the average ages of the female and male groups in the sample (accept null hypothesis).
 ```
+<img src="https://drive.google.com/uc?export=view&id=1Vaejjvggzvu7t2aCxxbkPlEPm6bEMXV3" alt="Image description" width="1000" height="300">
 
 ```
 
@@ -156,6 +150,7 @@ t_test_2 <- t.test(BMI ~ Diabetes, data = cleaned_data1)
 print(t_test_2)
 # p-value < 0.05 hence there is a significant difference in BMI between the two groups (reject null hypothesis).
 ```
+<img src="https://drive.google.com/uc?export=view&id=1Y5slrGgSEf_4rpoSLC37hzmJpvs7HGeq" alt="Image description" width="1000" height="300">
 
 ```
 
@@ -164,6 +159,7 @@ t_test_3 <- t.test(AlcoholYear ~ RelationshipStatus, data = cleaned_data1)
 print(t_test_3)
 # p-value < 0.05 hence there is a significant difference in alcohol consumption between the two groups (reject null hypothesis).
 ```
+<img src="https://drive.google.com/uc?export=view&id=1mtK_Jj8-e8BwdDEnx96ci6mPQuT1KJbh" alt="Image description" width="1000" height="300">
 
 
 ## Conclusion
