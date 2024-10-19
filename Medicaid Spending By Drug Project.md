@@ -29,7 +29,7 @@ library(randomForest)  # For random forest model
 ```
 # Set the timeout to 300 seconds
 options(timeout = 300)  # Dataset takes a long time to load 
-url <- "https://raw.githubusercontent.com/Clintonidahosa/R_projects/refs/heads/main/DSD_MCD_RY24_P06_V20_D22_BGM.csv"
+url <- "https://raw.githubusercontent.com/Clintonidahosa/R_projects/refs/heads/main/Medicaid%20Spending%20by%20Drug%20Dataset.csv"
 drugdata <- read.csv(url)
 ```
 
