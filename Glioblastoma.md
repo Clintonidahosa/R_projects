@@ -42,13 +42,13 @@ GBLM <- read.csv("https://raw.githubusercontent.com/HackBio-Internship/public_da
 View(GBLM) # View dataset to see the structure
 ```
 # Color palettes for the heatmaps
-Sequential color palette
+Sequential color palette- 
 Create a sequential color palette using the maximum number of shades of green:
 ```
 seq <- brewer.pal(9, "Greens") # Green gradient where light green represents low counts
 display.brewer.pal(n=9, name = "Greens") 
 ```
-Diverging Color Palette
+Diverging Color Palette- 
 Create a diverging color palette (5 red, 5 blue, 1 neutral) to represent expression figures across two colors:
 ```
 div <- rev(brewer.pal(11, "RdBu")) # Red for up-regulation and blue for down-regulation
