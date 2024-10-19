@@ -72,6 +72,7 @@ hist(cleaned_data1$Age, main="Age histogram", xlab="Age", col="yellow", border="
 Pulse_mean = mean(cleaned_data1$Pulse)
 print(Pulse_mean)
 ```
+<img src="https://drive.google.com/uc?export=view&id=1NkjyFPFzmGQj-9iMIsoDwPCmqW2m4Y3-" alt="Image description" width="500" height="300">
 
 ```
 
@@ -79,6 +80,7 @@ print(Pulse_mean)
 BPDia_range = range(cleaned_data1$BPDia)
 print(BPDia_range)
 ```
+<img src="https://drive.google.com/uc?export=view&id=1LJ2SnznONedoZnPOHEWue3IusjZQKVV1" alt="Image description" width="500" height="300">
 
 ```
 
@@ -88,6 +90,7 @@ print(Var_Income)
 SD_Income = sd(cleaned_data1$Income)
 print(SD_Income)
 ```
+<img src="https://drive.google.com/uc?export=view&id=1QBq61eXUDar0RmJB7czOA4oBexrkLPGo" alt="Image description" width="500" height="300">
 
 ```
 
