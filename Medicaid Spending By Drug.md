@@ -12,7 +12,7 @@ if(length(packages_to_install)) {
   install.packages(packages_to_install)
 }
 ```
-Loading Relevant Libraries
+# Loading Relevant Libraries
 Load the required libraries for data manipulation, visualization, and machine learning:
 ```
 library(dplyr)
@@ -23,7 +23,7 @@ library(reshape2)
 library(caret)  # For machine learning
 library(randomForest)  # For random forest model
 ```
-Dataset Importation
+# Dataset Importation
 Import the dataset from GitHub with an extended timeout due to large data:
 ```
 # Set the timeout to 300 seconds
@@ -31,9 +31,11 @@ options(timeout = 300)  # Dataset takes a long time to load
 url <- "https://raw.githubusercontent.com/Clintonidahosa/R_projects/refs/heads/main/DSD_MCD_RY24_P06_V20_D22_BGM.csv"
 drugdata <- read.csv(url)
 ```
-Data Cleaning and Inspection
-Visual Inspection
-Perform a visual inspection of the dataset:
+
+
+# Data Cleaning and Inspection
+## Visual Inspection
+### Perform a visual inspection of the dataset:
 ```
 View(drugdata)
 ```
