@@ -235,7 +235,24 @@ rf_performance <- postResample(predictions, test_data$Tot_Spndng_2022)
 print(rf_performance)  # RMSE and R-squared
 
 ```
+### Plotting predicted vs actual Total spending 2022
+```
+# Create a dataframe to store actual vs predicted values
+comparison_df <- data.frame(
+  Actual = test_data$Tot_Spndng_2022,
+  Predicted = predictions
+)
 
+# Plot predicted vs actual spending
+ggplot(comparison_df, aes(x = Actual, y = Predicted)) +
+  geom_point(color = "blue", alpha = 0.6) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +
+  labs(title = "Predicted vs Actual Total Spending (2022)",
+       x = "Actual Spending (2022)",
+       y = "Predicted Spending (2022)") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))  # Center the title
+```
 
 ### Conclusion - This analysis highlights trends and relationships in drug spending, identifying key insights that can drive decision-making in healthcare.
 
