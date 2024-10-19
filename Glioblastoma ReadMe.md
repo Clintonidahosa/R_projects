@@ -39,7 +39,10 @@ This analysis includes:
 
 ## Visualizations
 *Heatmap of gene expression.*
-![Image Description](https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f)  ![Image Description](https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f) 
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="First Image" width="200"/>
+  <img src="https://drive.google.com/uc?id=1LnzCDJirnBI6ZbslLBJydGNVfp8WZl_f" alt="Second Image" width="200"/>
+</p>
 
 
 ![Volcano Plot Example](path/to/volcano_plot.png)
