@@ -39,18 +39,22 @@ drugdata <- read.csv(url)
 ```
 View(drugdata)
 ```
+<img src="https://drive.google.com/uc?export=view&id=1P86WFR4Ycb_KEEf30w94qVxCXX85mDnp" alt="Description of Image" width="500"/>
+
 
 ### Check for missing data in each column:
 ```
 missing_data <- colSums(is.na(drugdata))
 View(missing_data)  # NA values present but not cleaned because they are relevant for Exp. Analysis.
 ```
+<img src="https://drive.google.com/uc?export=view&id=1GTm7dtO8JoaN8WElAzjYUul4nVJEGgqQ" alt="Description of Image" width="500"/>
 
 ### Check the data types of each column:
 ```
 col_type <- sapply(drugdata, class)
 View(col_type)  # Column types are appropriate
 ```
+<img src="https://drive.google.com/uc?export=view&id=1pD__XhOKeJoepiVx6rY8w27aKTBkuhmH" alt="Description of Image" width="500"/>
 
 ### Check for duplicate rows:
 ```
@@ -107,6 +111,8 @@ summary_stats <- drugdata %>%
   summarise(across(where(is.numeric), list(min = min, max = max), na.rm = TRUE))  # Calculate min and max for all numeric columns
 View(summary_stats)  # All values are within normal range. No negative value.
 ```
+<img src="https://drive.google.com/uc?export=view&id=1p82xPyYab9rTq6F2BbDZ6GvQEoiRj2YJ" alt="Description of Image" width="500"/>
+
 #### Conclusion from Data Inspection - The raw dataset is clean and ready to be explored.
 *
 *
