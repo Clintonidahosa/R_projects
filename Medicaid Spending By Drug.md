@@ -34,7 +34,7 @@ drugdata <- read.csv(url)
 ```
 
 ***
-# Data Cleaning and Inspection
+# Data Inspection and Cleaning
 ### Perform a visual inspection of the dataset:
 ```
 View(drugdata)
