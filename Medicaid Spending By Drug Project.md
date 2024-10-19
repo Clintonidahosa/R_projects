@@ -130,6 +130,7 @@ str(drugdata)
 ```
 summary(drugdata)
 ```
+<img src="https://drive.google.com/uc?export=view&id=1ei9viNeHUvBlcUusT02mtTeGa1DQ3NL1" alt="Description of Image" width="500"/>
 
 ### Spending Trends Visualization - Visualize spending trends:
 ```
@@ -172,6 +173,7 @@ ggplot(top_10_drugs, aes(x = reorder(Brnd_Name, -Total_Spending_All_Years), y = 
        y = "Total Spending (USD)") +
   theme_minimal()
 ```
+<img src="https://drive.google.com/uc?export=view&id=1y6KVVZEBFpRHavroB2Ad7ko0TIoOPyC0" alt="Description of Image" width="500"/>
 
 ### Spending vs Total Spending Scatter Plot - average spending per dosage unit vs total spending:
 ```
@@ -183,6 +185,7 @@ ggplot(drugdata, aes(x = Avg_Spnd_Per_Dsg_Unt_Wghtd_2022, y = Tot_Spndng_2022)) 
   theme_minimal() +
   theme(legend.position = "none")
 ```
+<img src="https://drive.google.com/uc?export=view&id=1zRu3_HlGUCys-ib5Phgk2pWNDmRiVKVx" alt="Description of Image" width="500"/>
 
 ### Spending Distributions by Year - Create a boxplot showing spending distributions by year:
 ```
@@ -194,6 +197,7 @@ ggplot(long_drug_data, aes(x = Year, y = Total_Spending)) +
   theme_minimal() +
   theme(legend.position = "none")
 ```
+<img src="https://drive.google.com/uc?export=view&id=108lbg4Umze_CUb-gTI1rjxxUwH7itHKR" alt="Description of Image" width="500"/>
 
 ### Correlation Heatmap - Calculate the correlation matrix for numeric columns and plot a heatmap:
 ```
@@ -214,6 +218,8 @@ ggplot(melted_cor_matrix, aes(Var1, Var2, fill = value)) +
   labs(title = "Correlation Heatmap of Drug Spending Variables") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+<img src="https://drive.google.com/uc?export=view&id=1YENAvCT9M7JWev8CYmbsotQzqPwc43Oa" alt="Description of Image" width="500"/>
+
 *
 *
 *
@@ -242,6 +248,8 @@ rf_performance <- postResample(predictions, test_data$Tot_Spndng_2022)
 print(rf_performance)  # RMSE and R-squared
 
 ```
+<img src="https://drive.google.com/uc?export=view&id=1DfZrPXfIaAdu3deqDU9YlACH4fbs3844" alt="Description of Image" width="500"/>
+
 ### Plotting predicted vs actual Total spending 2022
 ```
 # Create a dataframe to store actual vs predicted values
@@ -260,6 +268,7 @@ ggplot(comparison_df, aes(x = Actual, y = Predicted)) +
   theme_minimal() +
   theme(plot.title = element_text(hjust = 0.5))  # Center the title
 ```
+<img src="https://drive.google.com/uc?export=view&id=1xD26uapc37IEls_Rb4wQ0sLeaFqjuVHq" alt="Description of Image" width="500"/>
 
 ### Conclusion - This analysis highlights trends and relationships in drug spending, identifying key insights that can drive decision-making in healthcare.
 
