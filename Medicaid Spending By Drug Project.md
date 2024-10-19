@@ -124,6 +124,7 @@ View(summary_stats)  # All values are within normal range. No negative value.
 View(head(drugdata))
 str(drugdata)
 ```
+<img src="https://drive.google.com/uc?export=view&id=1q_qvGJlmPH5ymMoUSRmIbBQaGjlK04ia" alt="Description of Image" width="500"/>
 
 ### Generate summary statistics for all numerical columns:
 ```
