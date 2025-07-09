@@ -1,62 +1,84 @@
-suppressMessages(library(dplyr)) # This line is required to check your answer correctly
-options(readr.show_types = FALSE) # This line is required to check your answer correctly
+🏙️ Airbnb Private Room Analysis – New York
+As a consultant working for a real estate start-up, your task is to investigate the short-term rental market in New York City using Airbnb listing data. The objective is to analyze private rooms and provide key insights to the real estate company.
+
+📁 Dataset Overview
+Three files located in the data/ folder were used:
+
+airbnb_price.csv – Contains listing prices
+
+airbnb_room_type.xlsx – Contains room type information
+
+airbnb_last_review.tsv – Contains dates of last reviews
+
+🧩 Business Questions
+🗓️ What are the dates of the earliest and most recent reviews?
+
+🛏️ How many of the listings are private rooms?
+
+💰 What is the average listing price for all rooms (rounded to the nearest penny)?
+
+📊 Combine these insights into a summary tibble called review_dates with four columns:
+
+first_reviewed
+
+last_reviewed
+
+nb_private_rooms
+
+avg_price
+
+
+
+
+
+
+
+# Load Required Packages
+suppressMessages(library(dplyr))
+options(readr.show_types = FALSE)
 library(readr)
 library(readxl)
 library(stringr)
 library(data.table)
 
+# Read Data
 price <- read_csv("data/airbnb_price.csv")
-head(price)
 room <- read_excel("data/airbnb_room_type.xlsx")
-excel_sheets("data/airbnb_room_type.xlsx")
-head(room)
 review <- read_tsv("data/airbnb_last_review.tsv")
-head(review)
 
-#joining price and room
+# Merge Datasets
 price_room <- price %>%
-	            full_join(room, by="listing_id")
-glimpse(price_room)
+  full_join(room, by = "listing_id")
 
-#joining price_room and review
 price_room_review <- price_room %>%
-						full_join(review, by = "listing_id")
-glimpse(price_room_review)
+  full_join(review, by = "listing_id")
 
-#dates of earliest and most recent review
-earliest_review <- arrange(price_room_review, as.Date(last_review, format = "%B %d %Y"))
-ER <- slice(earliest_review, 1)
-ER$last_review
-latest_review <- arrange(price_room_review, desc(as.Date(last_review, format = "%B %d %Y")))
-LR <- slice(latest_review, 1)
-LR$last_review
+# 1. Earliest and Latest Review Dates
+earliest_review <- price_room_review %>%
+  arrange(as.Date(last_review, format = "%B %d %Y")) %>%
+  slice(1)
 
-#no of private rooms
-PR <- price_room_review %>%
-		filter(grepl("vate", room_type, ignore.case = TRUE))
-					
-length(PR$room_type)
+latest_review <- price_room_review %>%
+  arrange(desc(as.Date(last_review, format = "%B %d %Y"))) %>%
+  slice(1)
 
-#avg listing price for all rooms
-glimpse(price_room_review)
-distinct(price_room_review, price)
-Avg_room_price <- price_room_review %>%
-		mutate(num_price = as.numeric(gsub("dollars", "", price, ignore.case = TRUE)))%>%
-		summarize(Avg_num_price = round(mean(num_price), 2))
-Avg_room_price$Avg_num_price
+# 2. Number of Private Rooms
+private_rooms <- price_room_review %>%
+  filter(grepl("vate", room_type, ignore.case = TRUE))
 
+# 3. Average Price
+avg_price <- price_room_review %>%
+  mutate(num_price = as.numeric(gsub("dollars", "", price, ignore.case = TRUE))) %>%
+  summarize(avg_price = round(mean(num_price, na.rm = TRUE), 2))
 
-#merging all into a tibble called review dates
-headings = c("first_reviewed", "last_reviewed", "nb_private_rooms", "avg_price")
-elements = c(ER$last_review, LR$last_review, length(PR$room_type), Avg_room_price$Avg_num_price)
-
+# 4. Combine into Tibble
 review_dates <- tibble(
-	first_reviewed = as.Date(ER$last_review, format = "%B %d %Y"), 
-	last_reviewed = as.Date(LR$last_review, format = "%B %d %Y"),
-	nb_private_rooms = length(PR$room_type), 
-	avg_price = Avg_room_price$Avg_num_price
-	
+  first_reviewed = as.Date(earliest_review$last_review, format = "%B %d %Y"),
+  last_reviewed = as.Date(latest_review$last_review, format = "%B %d %Y"),
+  nb_private_rooms = nrow(private_rooms),
+  avg_price = avg_price$avg_price
 )
 
+# Output
 glimpse(review_dates)
-review_dates
+print(review_dates)
